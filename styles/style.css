@@ -1,0 +1,267 @@
+/* Variables to able change theme in JS */
+:root {
+    --bg-color: #3B4664;
+    --bg-dark: #262B3F;
+    --btn-color: #E8E2DC;
+    --btn-shadow: #a8a49f;
+    --equals-shadow: #922c21;
+    --special-shadow: #474f69;
+    --special-btn: #65719a;
+    --special-color: white;
+    --equals-btn: #D13F30;
+    --numb-op-color: #333;
+}
+
+/* Reset settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Spartan, Arial, sans-serif;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Calculator =============================== */
+.container {
+    width: 90%;
+    height: 80%;
+    min-width: 320px;
+    max-width: 400px;
+}
+
+/* HEADER =================================== */
+header {
+    color: white;
+    font-size: .7rem;
+    user-select: none;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme {
+    display: flex;
+    align-items: flex-end;
+    width: 7.5rem;
+    justify-content: space-between;
+}
+
+.theme > p {
+    margin-bottom: .1rem;
+}
+
+.input {
+    width: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.input p {
+    letter-spacing: .8rem;
+    margin-right: -.8rem;
+}
+
+.input input[type="range"] {
+    width: 4rem;
+    -webkit-appearance: none;
+    background-color: var(--bg-dark);
+    border-radius: 5rem;
+    height: 1.5rem;
+    padding: .3rem;
+    flex-shrink: 0;
+}
+
+input[type="range"]::-webkit-scrollbar-thumb {
+    -webkit-appearance: none;
+    transition: 200ms;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: var(--equals-btn);
+    cursor: pointer;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    transition: 200ms;
+}
+
+/* DISPLAY ================================== */
+.display {
+    background-color: #191F32;
+    color: white;
+    height: 19%;
+    margin: 1rem 0;
+    border-radius: .5rem;
+    padding: 1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Place that will appear entire operation typed by user */
+#numbers {
+    position: absolute;
+    font-size: 1rem;
+    top: .9rem;
+    right: 1.5rem;
+    font-weight: 400;
+    opacity: .8;
+}
+
+/* Current number typed by user in display */
+#result {
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: absolute;
+    right: 1.5rem;
+    top: 40%;
+}
+
+/* Buttons ================================= */
+.buttons {
+    background-color: var(--bg-dark);
+    height: 70%;
+    padding: 1.5rem;
+    border-radius: .5rem;
+
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "n7 n8 n9 del"
+                         "n4 n5 n6 plus"
+                         "n1 n2 n3 subt"
+                         "comma n0 div mult"
+                         "reset reset equals equals";
+}
+
+.btn {
+    background-color: var(--btn-color);
+    color: var(--numb-op-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+    border-radius: .5rem;
+    box-shadow: 0 4px var(--btn-shadow);
+    cursor: pointer;
+    transition: 200ms;
+    user-select: none;
+}
+
+/* Each button configuration */
+.zero {
+    grid-area: n0;
+}
+
+.one {
+    grid-area: n1;
+}
+    
+.two {
+    grid-area: n2;
+}
+
+.three {
+    grid-area: n3;
+}
+
+.four {
+  
+    grid-area: n4;
+}
+.five {
+    grid-area: n5;
+}
+
+.six {
+    grid-area: n6;
+}
+
+.seven {
+    grid-area: n7;
+}
+
+.eight {
+    grid-area: n8;
+}
+
+.nine {
+    grid-area: n9;
+}
+
+.dot {
+    grid-area: comma;
+    font-size: 1.2rem;
+}
+
+.add {
+    grid-area: plus;
+    font-size: 1.2rem;
+}
+
+.sub {
+    grid-area: subt;
+    font-size: 1.2rem;
+}
+
+.mult {
+    grid-area: mult;
+    font-size: 1.2rem;
+}
+
+.div {
+    grid-area: div;
+    font-size: 1.2rem;
+}
+
+.equals {
+    grid-area: equals;
+    background-color: var(--equals-btn);
+    box-shadow: 0 4px var(--equals-shadow);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.reset {
+    grid-area: reset;
+}
+
+.del {
+    grid-area: del;
+}
+
+.reset, .del {
+    background-color: var(--special-btn);
+    box-shadow: 0 4px var(--special-shadow);
+    font-size: 1rem;
+    font-weight: 400;
+    box-shadow: 0 4px var(--special-shadow)
+}
+
+.special {
+    color: var(--special-color);
+}
+
+/* MOBILE ============================= */
+@media screen and (max-width: 450px){ 
+    .container {
+        height: 90%;
+    }
+}
+
