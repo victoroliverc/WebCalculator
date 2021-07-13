@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./assets/keys.png">
+
+    <title>Calculator</title>
+
+    <script defer src="./scripts/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>calc</h1>
+            <div class="theme">
+                <p>THEME</p>
+                <div class="input">
+                    <p>123</p>
+                    <input oninput="changeTheme()" id = "theme" value="1" type="range" min="1" max="3">
+                </div>
+            </div>
+        </header>
+        <div class="display">
+            <div id="numbers"></div>
+            <h1 id="result"></h1>
+        </div>
+        <div class="buttons">
+            <div id="zero" class="btn zero">0</div>
+            <div id="one" class="btn one">1</div>
+            <div id="two" class="btn two">2</div>
+            <div id="three" class="btn three">3</div>
+            <div id="four" class="btn four">4</div>
+            <div id="five" class="btn five">5</div>
+            <div id="six" class="btn six">6</div>
+            <div id="seven" class="btn seven">7</div>
+            <div id="eight" class="btn eight">8</div>
+            <div id="nine" class="btn nine">9</div>
+            <div id="dot" class="btn dot">.</div>
+            <div id="div" class="btn div">/</div>
+            <div id="mult" class="btn mult">x</div>
+            <div id="sub" class="btn sub">-</div>
+            <div id="add" class="btn add">+</div>
+            <div id="del" class="btn del special">DEL</div>
+            <div id="reset" class="btn reset special">RESET</div>
+            <div id="equals" class="btn equals special">=</div>
+        </div>
+    </div>
+</body>
+</html>
