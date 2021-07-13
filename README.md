@@ -31,8 +31,8 @@ This project is a way to practice the web development knowledge acquired. The en
 on <a href="https://victoroliverc.github.io/WebCalculator/">GitHub Pages</a> 
 
 <p align="center">
-  <img src="./assets/mobile-calc.gif">
-  <img src="./assets/desktop-calc.gif" width="492px">
+  <img src="./assets/mobile-calc.gif" height="500px">
+  <img src="./assets/desktop-calc.gif" height="500px">
 </p>
 
 <h2 id="requirements">Requirements ☑️</h2>
