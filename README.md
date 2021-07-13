@@ -27,7 +27,7 @@ This project is a way to practice the web development knowledge acquired. The en
 - [ ] Advanced operations
 
 <h2 id="preview">Preview 👀</h2>
-- on <a href="https://victoroliverc.github.io/WebCalculator/">GitHub Pages</a> 
+on <a href="https://victoroliverc.github.io/WebCalculator/">GitHub Pages</a> 
 
 <p align="center">
   <img src="./assets/mobile-calc.gif">
