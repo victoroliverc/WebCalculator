@@ -14,3 +14,4 @@
 
 ## Preview 👀
 
+<img href="./assets/mobile-calc.gif">
