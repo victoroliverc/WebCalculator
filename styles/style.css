@@ -1,4 +1,4 @@
-/* Variables to able change theme in JS */
+/* variables to able change theme in JS */
 :root {
     --bg-color: #3B4664;
     --bg-dark: #262B3F;
@@ -37,6 +37,7 @@ body {
 .container {
     width: 90%;
     height: 80%;
+    max-height: 720px;
     min-width: 320px;
     max-width: 400px;
 }
@@ -256,6 +257,12 @@ input[type="range"]::-webkit-slider-thumb {
 @media screen and (max-width: 450px){ 
     .container {
         height: 90%;
+    }
+}
+
+@media screen and (min-height: 1000px) {
+    .container {
+        max-width: 500px;
     }
 }
 
